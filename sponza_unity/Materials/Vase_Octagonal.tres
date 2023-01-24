@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://djpxr5ilxwywj"]
+
+[ext_resource type="Texture2D" uid="uid://dej3viwrrv8nq" path="res://sponza_unity/Textures/Vase_Round_Diffuse.png" id="1_ehqdo"]
+[ext_resource type="Texture2D" uid="uid://d12wtpeyuxga3" path="res://sponza_unity/Textures/Vase_Round_Normal.png" id="2_nqj76"]
+
+[resource]
+resource_name = "Vase_Octagonal"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource( "1_ehqdo" )
+metallic = 1.0
+roughness = 0.858579
+normal_enabled = true
+normal_texture = ExtResource( "2_nqj76" )

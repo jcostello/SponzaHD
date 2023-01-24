@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cixoy5q3sfxwm"]
+
+[ext_resource type="Texture2D" uid="uid://dhikvxamvm0tu" path="res://sponza_unity/Textures/Vase_Hanging_Chain_Diffuse.png" id="1_k3nvm"]
+[ext_resource type="Texture2D" uid="uid://bj6e3ssaes2us" path="res://sponza_unity/Textures/Vase_Hanging_Chain_Metallic-Vase_Hanging_Chain_Smoothness.png" id="2_pipbg"]
+[ext_resource type="Texture2D" uid="uid://b4uj3w2h1sls1" path="res://sponza_unity/Textures/Vase_Hanging_Chain_Normal.png" id="3_gb2i6"]
+
+[resource]
+resource_name = "Vase_Hanging_Chain"
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_k3nvm")
+metallic = 1.0
+metallic_texture = ExtResource("2_pipbg")
+metallic_texture_channel = 2
+roughness = 0.24
+roughness_texture = ExtResource("2_pipbg")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_gb2i6")

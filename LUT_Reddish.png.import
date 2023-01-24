@@ -1,0 +1,26 @@
+[remap]
+
+importer="3d_texture"
+type="CompressedTexture3D"
+uid="uid://b57mtw1tjju0o"
+path="res://.godot/imported/LUT_Reddish.png-608ca8a7c2e0d5214d03ac845b28e44f.ctex3d"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://LUT_Reddish.png"
+dest_files=["res://.godot/imported/LUT_Reddish.png-608ca8a7c2e0d5214d03ac845b28e44f.ctex3d"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=16
+slices/vertical=1

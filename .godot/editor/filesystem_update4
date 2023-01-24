@@ -1,0 +1,11 @@
+res://sponza_unity/sponza_unity.exr
+res://sponza_unity/sponza_unity.lmbake
+res://sponza_unity/sponza_unity.tscn
+res://player/bullet/bullet_material.tres
+res://sponza_unity/Materials/Arches.tres
+res://sponza_unity/Materials/Bricks.tres
+res://sponza_unity/Materials/Floor.tres
+res://sponza_unity/Materials/Lion_Head.tres
+res://sponza_unity/Materials/Lion_Shield.tres
+res://sponza_unity/Materials/Vase_Hanging.tres
+res://player/model/robotemitter.tres

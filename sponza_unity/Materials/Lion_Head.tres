@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://djtd23kycr0py"]
+
+[ext_resource type="Texture2D" uid="uid://2mid7pdf5y40" path="res://sponza_unity/Textures/Lion_Head_Diffuse.png" id="1_d6d7c"]
+[ext_resource type="Texture2D" uid="uid://c4ccl023pggo8" path="res://sponza_unity/Textures/Lion_Head_Normal.png" id="2_eak7p"]
+[ext_resource type="Texture2D" uid="uid://dttyjmorrb8op" path="res://sponza_unity/Textures/Lion_Head_Metallic-Lion_Head_Smoothness.png" id="3_ajfbd"]
+
+[resource]
+resource_name = "Lion_Head"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_d6d7c")
+metallic = 1.0
+metallic_texture_channel = 2
+roughness = 0.8
+roughness_texture = ExtResource("3_ajfbd")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_eak7p")

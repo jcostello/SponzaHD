@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://0r2a6u3bho6x"]
+
+[ext_resource type="Texture2D" uid="uid://tshj4s1ebecc" path="res://sponza_unity/Textures/Lion_Shield_Diffuse.png" id="1_sexkt"]
+[ext_resource type="Texture2D" uid="uid://dshkam5uee75j" path="res://sponza_unity/Textures/Lion_Shield_Normal.png" id="2_pi4ec"]
+[ext_resource type="Texture2D" uid="uid://br7t24uyclai5" path="res://sponza_unity/Textures/Lion_Shield_Metallic-Lion_Shield_Smoothness.png" id="3_bt8ma"]
+
+[resource]
+resource_name = "Lion_Shield"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_sexkt")
+metallic = 1.0
+metallic_texture_channel = 2
+roughness = 0.8
+roughness_texture = ExtResource("3_bt8ma")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_pi4ec")
