@@ -1,0 +1,353 @@
+[gd_scene load_steps=18 format=3 uid="uid://buocgj4g2vlg7"]
+
+[ext_resource type="PackedScene" uid="uid://cekmvskhwprtj" path="res://sponza_unity/untitled.gltf" id="1_4db4h"]
+[ext_resource type="Material" uid="uid://b1nbrkbsfj6q" path="res://sponza_unity/Materials/Bricks.tres" id="2_3hwvq"]
+[ext_resource type="Material" uid="uid://buh1jq7wlbhj8" path="res://sponza_unity/Materials/Arches.tres" id="2_yimcy"]
+[ext_resource type="Material" uid="uid://dbc46mskixd1g" path="res://sponza_unity/Materials/Floor.tres" id="4_esldr"]
+[ext_resource type="Material" uid="uid://djtd23kycr0py" path="res://sponza_unity/Materials/Lion_Head.tres" id="4_fmfx3"]
+[ext_resource type="Material" uid="uid://cm05u768ebvyd" path="res://sponza_unity/Materials/Vase_Hanging.tres" id="5_u6jtc"]
+[ext_resource type="Material" uid="uid://0r2a6u3bho6x" path="res://sponza_unity/Materials/Lion_Shield.tres" id="6_h4gl1"]
+[ext_resource type="Material" uid="uid://cixoy5q3sfxwm" path="res://sponza_unity/Materials/Vase_Hanging_Chain.tres" id="8_pltjr"]
+[ext_resource type="LightmapGIData" uid="uid://bfvf0so10ush" path="res://sponza_unity/sponza_unity.lmbake" id="9_4bhpk"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_hhiyd"]
+rayleigh_coefficient = 0.6
+mie_eccentricity = 0.9
+turbidity = 5.0
+sun_disk_scale = 0.0
+
+[sub_resource type="Sky" id="Sky_14syn"]
+sky_material = SubResource("PhysicalSkyMaterial_hhiyd")
+
+[sub_resource type="Environment" id="Environment_yle5t"]
+background_mode = 2
+sky = SubResource("Sky_14syn")
+tonemap_mode = 3
+ssr_max_steps = 256
+ssr_fade_in = 0.0776444
+ssr_fade_out = 1.1487
+ssao_enabled = true
+ssil_radius = 3.0
+sdfgi_use_occlusion = true
+sdfgi_bounce_feedback = 1.17
+sdfgi_y_scale = 0
+glow_enabled = true
+glow_levels/1 = 0.5
+glow_levels/2 = 1.0
+glow_levels/4 = 0.8
+glow_levels/5 = 0.0
+glow_normalized = true
+glow_blend_mode = 1
+glow_hdr_scale = 0.38
+glow_hdr_luminance_cap = 0.17
+volumetric_fog_density = 0.1161
+volumetric_fog_albedo = Color(1, 0.956863, 0.85098, 1)
+volumetric_fog_sky_affect = 0.181
+volumetric_fog_temporal_reprojection_amount = 0.95
+adjustment_enabled = true
+adjustment_contrast = 1.07
+adjustment_saturation = 1.12
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_3yfgd"]
+auto_exposure_enabled = true
+auto_exposure_scale = 0.06
+auto_exposure_speed = 1.0
+auto_exposure_min_sensitivity = 14.8
+auto_exposure_max_sensitivity = 44.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_bi7mf"]
+
+[sub_resource type="Animation" id="Animation_i3wjq"]
+resource_name = "Camera"
+length = 8.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.44743, 1.37391, 9.41043), Vector3(0.768885, 0.99769, -7.12144)]
+}
+
+[sub_resource type="Animation" id="Animation_ktmun"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.14332, 2.51444, 9.57268)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j5o2f"]
+_data = {
+"Camera": SubResource("Animation_i3wjq"),
+"RESET": SubResource("Animation_ktmun")
+}
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yle5t")
+camera_attributes = SubResource("CameraAttributesPractical_3yfgd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.871114, -0.470316, 0.141289, 0.0121892, 0.266915, 0.963643, -0.490929, 0.841166, -0.226781, 0, 0, 0)
+light_temperature = 6249.0
+light_volumetric_fog_energy = 1.986
+light_bake_mode = 1
+shadow_enabled = true
+directional_shadow_max_distance = 50.0
+sky_mode = 2
+
+[node name="untitled" parent="." instance=ExtResource("1_4db4h")]
+
+[node name="Arch_B002" parent="untitled/Sponza_Grouped" index="20"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_B003" parent="untitled/Sponza_Grouped" index="21"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_B004" parent="untitled/Sponza_Grouped" index="22"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_B005" parent="untitled/Sponza_Grouped" index="23"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_B006" parent="untitled/Sponza_Grouped" index="24"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_B007" parent="untitled/Sponza_Grouped" index="25"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_C" parent="untitled/Sponza_Grouped" index="29"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_D" parent="untitled/Sponza_Grouped" index="31"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_D001" parent="untitled/Sponza_Grouped" index="32"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_E" parent="untitled/Sponza_Grouped" index="33"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_E001" parent="untitled/Sponza_Grouped" index="34"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_G" parent="untitled/Sponza_Grouped" index="36"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_G001" parent="untitled/Sponza_Grouped" index="37"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_H" parent="untitled/Sponza_Grouped" index="38"]
+material_override = ExtResource("2_yimcy")
+
+[node name="Arch_H001" parent="untitled/Sponza_Grouped" index="39"]
+material_override = ExtResource("2_yimcy")
+
+[node name="BrickTrim_A" parent="untitled/Sponza_Grouped" index="40"]
+surface_material_override/0 = ExtResource("2_3hwvq")
+
+[node name="BrickTrim_B" parent="untitled/Sponza_Grouped" index="41"]
+surface_material_override/0 = ExtResource("2_3hwvq")
+
+[node name="BrickWall_A" parent="untitled/Sponza_Grouped" index="42"]
+surface_material_override/0 = ExtResource("2_3hwvq")
+
+[node name="BrickWall_B" parent="untitled/Sponza_Grouped" index="43"]
+surface_material_override/0 = ExtResource("2_3hwvq")
+
+[node name="BrickWall_C" parent="untitled/Sponza_Grouped" index="44"]
+surface_material_override/0 = ExtResource("2_3hwvq")
+
+[node name="BrickWall_D" parent="untitled/Sponza_Grouped" index="45"]
+surface_material_override/0 = ExtResource("2_3hwvq")
+
+[node name="BrickWall_E" parent="untitled/Sponza_Grouped" index="46"]
+surface_material_override/0 = ExtResource("2_3hwvq")
+
+[node name="BrickWall_F" parent="untitled/Sponza_Grouped" index="47"]
+surface_material_override/0 = ExtResource("2_3hwvq")
+
+[node name="Fabric_Curtain_Red_01" parent="untitled/Sponza_Grouped" index="139"]
+mesh = null
+
+[node name="Floor_Lower" parent="untitled/Sponza_Grouped" index="168"]
+material_override = ExtResource("4_esldr")
+
+[node name="Lion_Head001" parent="untitled/Sponza_Grouped" index="182"]
+material_override = ExtResource("4_fmfx3")
+
+[node name="Lion_Shield" parent="untitled/Sponza_Grouped" index="183"]
+material_override = ExtResource("6_h4gl1")
+
+[node name="Support_Walls" parent="untitled/Sponza_Grouped" index="188"]
+surface_material_override/0 = ExtResource("2_3hwvq")
+
+[node name="Vase_Hanging" parent="untitled/Sponza_Grouped" index="189"]
+material_override = ExtResource("5_u6jtc")
+
+[node name="Vase_Hanging001" parent="untitled/Sponza_Grouped" index="190"]
+transform = Transform3D(-1, -7.54979e-08, -7.54979e-08, 7.54979e-08, 0, -1, 7.54979e-08, -1, 0, 33.4874, -579.25, 1905.63)
+surface_material_override/0 = ExtResource("5_u6jtc")
+
+[node name="Vase_Hanging002" parent="untitled/Sponza_Grouped" index="191"]
+material_override = ExtResource("5_u6jtc")
+
+[node name="Vase_Hanging003" parent="untitled/Sponza_Grouped" index="192"]
+material_override = ExtResource("5_u6jtc")
+
+[node name="Vase_Hanging_Chain" parent="untitled/Sponza_Grouped" index="193"]
+material_override = ExtResource("8_pltjr")
+
+[node name="Vase_Hanging_Chain001" parent="untitled/Sponza_Grouped" index="194"]
+material_override = ExtResource("8_pltjr")
+
+[node name="Vase_Hanging_Chain002" parent="untitled/Sponza_Grouped" index="195"]
+material_override = ExtResource("8_pltjr")
+
+[node name="Vase_Hanging_Chain003" parent="untitled/Sponza_Grouped" index="196"]
+material_override = ExtResource("8_pltjr")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.972395, 0.00222194, -0.233331, 0, 0.999955, 0.0095223, 0.233341, -0.00925943, 0.972351, -1.14332, 2.51444, 9.57268)
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+quality = 2
+bounces = 5
+camera_attributes = SubResource("CameraAttributesPractical_bi7mf")
+light_data = ExtResource("9_4bhpk")
+
+[node name="ReflectionProbes" type="Node3D" parent="."]
+
+[node name="Center" type="ReflectionProbe" parent="ReflectionProbes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0228095, 3.89475, 0)
+extents = Vector3(2.36, 20, 8.517)
+origin_offset = Vector3(-0.129883, -2.66992, 0)
+box_projection = true
+interior = true
+enable_shadows = true
+mesh_lod_threshold = 0.0
+
+[node name="FirstFloor-Back" type="ReflectionProbe" parent="ReflectionProbes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66912, 10.406)
+max_distance = 100.0
+extents = Vector3(2.29396, 1.758, 2.735)
+origin_offset = Vector3(0, -0.444336, 0)
+box_projection = true
+interior = true
+enable_shadows = true
+
+[node name="FirstFloor-Front" type="ReflectionProbe" parent="ReflectionProbes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66912, -10.5256)
+max_distance = 100.0
+extents = Vector3(2.35099, 1.767, 2.935)
+origin_offset = Vector3(0, -0.444336, 0.482422)
+box_projection = true
+interior = true
+enable_shadows = true
+
+[node name="FirstFloor-Left" type="ReflectionProbe" parent="ReflectionProbes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10989, 1.66912, 0)
+max_distance = 100.0
+extents = Vector3(1.945, 1.818, 12.623)
+box_projection = true
+interior = true
+enable_shadows = true
+mesh_lod_threshold = 0.0
+
+[node name="FirstFloor-Right" type="ReflectionProbe" parent="ReflectionProbes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15161, 1.66912, 0.00222969)
+max_distance = 100.0
+extents = Vector3(2.05439, 1.81828, 12.595)
+box_projection = true
+interior = true
+enable_shadows = true
+mesh_lod_threshold = 0.0
+
+[node name="SecondFloor-Left" type="ReflectionProbe" parent="ReflectionProbes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10989, 5.95796, 0)
+max_distance = 100.0
+extents = Vector3(2.10302, 2.429, 14.4674)
+box_projection = true
+enable_shadows = true
+mesh_lod_threshold = 0.0
+
+[node name="SecondFloor-Right" type="ReflectionProbe" parent="ReflectionProbes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.16569, 5.95796, 0)
+max_distance = 100.0
+extents = Vector3(2.1741, 2.429, 12.7775)
+box_projection = true
+enable_shadows = true
+mesh_lod_threshold = 0.0
+
+[node name="SecondFloor-Back" type="ReflectionProbe" parent="ReflectionProbes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.90186, 10.406)
+max_distance = 100.0
+extents = Vector3(2.626, 2.324, 2.399)
+origin_offset = Vector3(0, -0.444336, 0)
+box_projection = true
+enable_shadows = true
+
+[node name="SecondFloor-Front" type="ReflectionProbe" parent="ReflectionProbes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.90186, -10.5256)
+max_distance = 100.0
+extents = Vector3(2.626, 2.324, 2.935)
+origin_offset = Vector3(0, -0.444336, 0.482422)
+box_projection = true
+enable_shadows = true
+
+[node name="Vases" type="Node3D" parent="ReflectionProbes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.585528, 0)
+visible = false
+
+[node name="ReflectionProbe4" type="ReflectionProbe" parent="ReflectionProbes/Vases"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6265, 0.920661, 4.88467)
+extents = Vector3(0.286, 1.784, 0.357)
+origin_offset = Vector3(0, -0.332031, 0)
+box_projection = true
+enable_shadows = true
+
+[node name="ReflectionProbe5" type="ReflectionProbe" parent="ReflectionProbes/Vases"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63863, 0.920661, 4.88467)
+max_distance = 100.0
+extents = Vector3(0.286, 1.784, 0.357)
+origin_offset = Vector3(0, -0.34668, 0)
+box_projection = true
+enable_shadows = true
+
+[node name="ReflectionProbe6" type="ReflectionProbe" parent="ReflectionProbes/Vases"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6265, 0.920661, -4.95166)
+max_distance = 100.0
+extents = Vector3(0.286, 1.784, 0.357)
+origin_offset = Vector3(0, -0.34668, 0)
+box_projection = true
+enable_shadows = true
+
+[node name="ReflectionProbe7" type="ReflectionProbe" parent="ReflectionProbes/Vases"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63863, 0.920661, -4.95166)
+max_distance = 100.0
+extents = Vector3(0.286, 1.784, 0.357)
+origin_offset = Vector3(0, -0.34668, 0)
+box_projection = true
+enable_shadows = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Camera"
+libraries = {
+"": SubResource("AnimationLibrary_j5o2f")
+}
+
+[editable path="untitled"]

@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://bodm56c7fa7hn"]
+
+[ext_resource type="Texture2D" uid="uid://cpdshxp336or6" path="res://sponza_unity/Textures/Flagpoles_Diffuse.png" id="1_80ogi"]
+[ext_resource type="Texture2D" uid="uid://bp51kxsl60de0" path="res://sponza_unity/Textures/Flagpoles_Metallic-Flagpoles_Smoothness.png" id="2_2ueq3"]
+[ext_resource type="Texture2D" uid="uid://c61jcua6s773" path="res://sponza_unity/Textures/Flagpoles_Normal.png" id="3_nrmtx"]
+
+[resource]
+resource_name = "Flagpoles"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource( "1_80ogi" )
+metallic = 1.0
+metallic_texture = ExtResource( "2_2ueq3" )
+metallic_texture_channel = 2
+roughness_texture = ExtResource( "2_2ueq3" )
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource( "3_nrmtx" )

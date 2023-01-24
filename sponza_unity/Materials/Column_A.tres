@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://d28iuwtmm3sfk"]
+
+[ext_resource type="Texture2D" uid="uid://bwescq5sj2c77" path="res://sponza_unity/Textures/Column_A_Diffuse.png" id="1_t4ykw"]
+[ext_resource type="Texture2D" uid="uid://cvu02d3kwuu38" path="res://sponza_unity/Textures/Column_A_Metallic-Column_A_Smoothness.png" id="2_bvdw8"]
+[ext_resource type="Texture2D" uid="uid://58jemup55fi4" path="res://sponza_unity/Textures/Column_A_Normal.png" id="3_hqrcx"]
+
+[resource]
+resource_name = "Column_A"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource( "1_t4ykw" )
+metallic = 1.0
+metallic_texture = ExtResource( "2_bvdw8" )
+metallic_texture_channel = 2
+roughness_texture = ExtResource( "2_bvdw8" )
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource( "3_hqrcx" )
+texture_filter = 5

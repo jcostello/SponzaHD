@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://b6p4lup1lhdmp"]
+
+[ext_resource type="Texture2D" uid="uid://cibocu73xruch" path="res://sponza_unity/Textures/Ivy_Diffuse.png" id="1_6k2r1"]
+[ext_resource type="Texture2D" uid="uid://cd04hkknwpktn" path="res://sponza_unity/Textures/Ivy_Metallic-Ivy_Smoothness.png" id="2_1xo3t"]
+[ext_resource type="Texture2D" uid="uid://cddsoo780w5ey" path="res://sponza_unity/Textures/Ivy_Normal.png" id="3_kwv5d"]
+
+[resource]
+resource_name = "Ivy"
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource( "1_6k2r1" )
+metallic = 1.0
+metallic_texture = ExtResource( "2_1xo3t" )
+metallic_texture_channel = 2
+roughness_texture = ExtResource( "2_1xo3t" )
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource( "3_kwv5d" )
